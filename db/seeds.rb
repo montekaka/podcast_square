@@ -7,4 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-podcast = Podcast.create([{itunes_id: '826420969'}])
+podcast = Podcast.create([{itunes_id: '826420969'}, {itunes_id: '522845993'}])
+#country = Country.create([{country_code: 'US', country_label: "United States"}])

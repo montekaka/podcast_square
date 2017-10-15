@@ -22,9 +22,11 @@ task :get_itunes_reviews => :environment do
 						podcast_reviews.push(user_review)
 					end				
 				end
+			end			
+			if podcast_reviews.length > 0 
+				Review.create(podcast_reviews)
 			end
 		end
-		p podcast_reviews
 	end
 
 

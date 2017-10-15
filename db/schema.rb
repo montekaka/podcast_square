@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015023637) do
+ActiveRecord::Schema.define(version: 20171015040517) do
 
   create_table "countries", force: :cascade do |t|
     t.string "country_code"
@@ -26,6 +26,18 @@ ActiveRecord::Schema.define(version: 20171015023637) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "review_itunes_id"
+    t.string "author"
+    t.float "rating"
+    t.text "title"
+    t.text "content"
+    t.string "country_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "podcast_id"
   end
 
 end
