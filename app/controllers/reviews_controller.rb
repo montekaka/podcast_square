@@ -7,8 +7,9 @@ class ReviewsController < ApplicationController
   def index
     #@reviews = Review.all
     @reviews = @podcast.reviews.all
+    data = {podcast: @podcast, reviews: @reviews}
 
-    render json: @reviews
+    render json: data
   end
 
   # GET /reviews/1
